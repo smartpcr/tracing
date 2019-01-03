@@ -1,3 +1,6 @@
 [submodule "opencensus-csharp"]
 	path = opencensus-csharp
 	url = ./opencensus-csharp
+[submodule "csharp-netcore"]
+	path = csharp-netcore
+	url = ./csharp-netcore
