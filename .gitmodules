@@ -7,3 +7,9 @@
 [submodule "jaeger-kubernetes"]
 	path = jaeger-kubernetes
 	url = ./jaeger-kubernetes
+[submodule "jaeger-client-csharp"]
+	path = jaeger-client-csharp
+	url = ./jaeger-client-csharp
+[submodule "opentracing-csharp"]
+	path = opentracing-csharp
+	url = ./opentracing-csharp
