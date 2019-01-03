@@ -4,3 +4,6 @@
 [submodule "csharp-netcore"]
 	path = csharp-netcore
 	url = ./csharp-netcore
+[submodule "jaeger-kubernetes"]
+	path = jaeger-kubernetes
+	url = ./jaeger-kubernetes
