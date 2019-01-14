@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ namespace HelloApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            this.SlowCall();
             return "value";
         }
 
@@ -40,6 +42,11 @@ namespace HelloApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        private void SlowCall()
+        {
+            Thread.Sleep(TimeSpan.FromSeconds(2));
         }
     }
 }
