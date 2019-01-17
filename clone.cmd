@@ -3,3 +3,4 @@ git clone https://github.com/jaegertracing/jaeger-client-csharp.git jaeger-clien
 git clone https://github.com/jaegertracing/jaeger-kubernetes.git jaeger-kubernetes
 git clone https://github.com/census-instrumentation/opencensus-csharp.git opencensus-csharp
 git clone https://github.com/opentracing/opentracing-csharp.git opentracing-csharp
+git clone https://github.com/jaegertracing/jaeger-client-node.git jaeger-client-node
