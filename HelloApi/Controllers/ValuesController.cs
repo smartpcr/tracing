@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OpenTracing;
 
 namespace HelloApi.Controllers
 {
@@ -10,6 +12,13 @@ namespace HelloApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly ITracer tracer;
+
+        public ValuesController(ITracer tracer)
+        {
+            this.tracer = tracer;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -21,6 +30,7 @@ namespace HelloApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            this.SlowCall();
             return "value";
         }
 
@@ -40,6 +50,20 @@ namespace HelloApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        private void SlowCall()
+        {
+            var span = tracer.BuildSpan("SlowCall").Start();
+            var startTime = DateTime.UtcNow;
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            var endTime = DateTime.UtcNow;
+            span.Log(new List<KeyValuePair<string, object>>()
+            {
+                {new KeyValuePair<string, object>("start", startTime) },
+                {new KeyValuePair<string, object>("stop", endTime) },
+            });
+            span.Finish();
         }
     }
 }

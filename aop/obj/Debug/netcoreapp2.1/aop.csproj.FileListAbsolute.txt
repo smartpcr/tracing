@@ -1,0 +1,11 @@
+e:\work\github\aop\bin\Debug\netcoreapp2.1\aop.deps.json
+e:\work\github\aop\bin\Debug\netcoreapp2.1\aop.runtimeconfig.json
+e:\work\github\aop\bin\Debug\netcoreapp2.1\aop.runtimeconfig.dev.json
+e:\work\github\aop\bin\Debug\netcoreapp2.1\aop.dll
+e:\work\github\aop\bin\Debug\netcoreapp2.1\aop.pdb
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.csprojAssemblyReference.cache
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.csproj.CoreCompileInputs.cache
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.AssemblyInfoInputs.cache
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.AssemblyInfo.cs
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.dll
+e:\work\github\aop\obj\Debug\netcoreapp2.1\aop.pdb
